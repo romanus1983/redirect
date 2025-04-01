@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS links (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    url VARCHAR(2048) NOT NULL,
+    code VARCHAR(10) NOT NULL UNIQUE,
+    clicks INT DEFAULT 0,
+    created_at DATETIME NOT NULL,
+    updated_at DATETIME DEFAULT NULL,
+    INDEX idx_code (code)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
