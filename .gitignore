@@ -1,8 +1,31 @@
-/vendor/
+# IDE & System Files
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Environment & Config
 .env
+.env.*
+!.env.example
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# Storage & Logs
 /storage/logs/*
 /storage/cache/*
 /storage/backups/*
 !storage/logs/.gitkeep
 !storage/cache/.gitkeep
 !storage/backups/.gitkeep
+
+# Server Config
+nginx.conf
+*.conf
+
+# Other
+*.log
+*.cache
+*.bak
